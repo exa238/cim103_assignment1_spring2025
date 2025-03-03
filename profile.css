@@ -55,12 +55,11 @@ a{
 .nav-menu a{
     text-decoration: none;
     color: white;
-    padding: 10 px 20px;
+    padding: 10px 20px;
     transition: background 0.3 s ease-in-out;
 }
 
 .nav-menu a:hover {
-    backdrop-color: #555;
     border-radius: 5px;
 }
 .gallery-container::-webkit-scrollbar{
@@ -69,7 +68,7 @@ a{
 .gallery-container::-webkit-scrollbar-thumb{
     background: linear-gradient(45deg, #F72585, #4CC9F0, #8900f2);
     border-radius: 0px;
-    border: 2px;
+    border: 2px solid white;
 }
 .gallery-container::-webkit-scrollbar-track{
     background-color: #480CA8;
@@ -81,7 +80,7 @@ a{
     padding: 20px 0;
 }
 .gallery{
-    display: 300px;
+    display: flex;
     gap: 20px;
     padding: 10px;
 }
@@ -107,6 +106,17 @@ footer{
     background-color: #560BAD;
     margin-left: 20px;
     margin-right: 20px;
+    position: relative;
+    border: 3px solid transparent;
+    animation: neonBorder 1.5s infinite alternate;
+}
+@keyframes neonBorder{
+    0%{
+        box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    }
+    100%{
+        box-shadow: 0 0 10px #4CC9F0, 0 0 15px #4CC9F0, 0 0 20px #4CC9F0, 0 0 25px #4CC9F0;
+    }
 }
 html{
     scroll-behavior: smooth;
